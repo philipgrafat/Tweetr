@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="at.philipgraf.tweetr.ui.TweetActivity"
+    android:id="@+id/tweetLayout"
+    android:background="@color/white">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/profileImageView"
+        android:src="@drawable/default_profile_6_bigger"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Aaron Paul"
+        android:id="@+id/fullNameLabel"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/profileImageView"
+        android:layout_toEndOf="@+id/profileImageView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="#292f33"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="\@aaronpaul_8"
+        android:id="@+id/screenNameLabel"
+        android:textColor="#66757f"
+        android:fontFamily="sans-serif-light"
+        android:layout_alignBottom="@+id/fullNameLabel"
+        android:layout_toRightOf="@+id/fullNameLabel"
+        android:layout_toEndOf="@+id/fullNameLabel"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="How a language mix-up made a young consultant earn a less than complimentary nickname #ThisIsTheNHS"
+        android:id="@+id/tweetTextLabel"
+        android:layout_gravity="center_vertical"
+        android:textColor="#292f33"
+        android:layout_below="@+id/fullNameLabel"
+        android:layout_alignLeft="@+id/fullNameLabel"
+        android:layout_alignStart="@+id/fullNameLabel"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3. Oktober 2014 - 7:13"
+        android:id="@+id/timeLabel"
+        android:textColor="#66757f"
+        android:fontFamily="sans-serif-light"
+        android:layout_below="@+id/actionsView"
+        android:layout_alignLeft="@+id/actionsView"
+        android:layout_alignStart="@+id/actionsView"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:id="@+id/actionsView"
+        android:layout_below="@+id/tweetTextLabel"
+        android:layout_alignLeft="@+id/tweetTextLabel"
+        android:layout_alignStart="@+id/tweetTextLabel"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="16dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/replyView">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/replyButton"
+                android:src="@drawable/twitter_reply"
+                android:focusable="true"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/replyCountLabel"
+                android:layout_gravity="center_vertical"
+                android:textColor="#66757f"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:text="Reply"
+                android:fontFamily="sans-serif-light"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/retweetView">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/retweetButton"
+                android:src="@drawable/twitter_retweet"
+                android:focusable="true"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="11"
+                android:id="@+id/retweetCountLabel"
+                android:layout_gravity="center_vertical"
+                android:textColor="#66757f"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif-light"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/likeView">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/likeButton"
+                android:src="@drawable/twitter_like"
+                android:focusable="true"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="11"
+                android:id="@+id/likeCountLabel"
+                android:layout_gravity="center_vertical"
+                android:textColor="#66757f"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif-light"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:src="#FFe1e8ed"
+        android:layout_width="match_parent"
+        android:layout_height="4.5dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:id="@+id/horizontalDivider"
+        android:layout_below="@+id/timeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/horizontalDivider"
+        android:src="#f6f6f6"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Es tut uns leid, aber Antworten auf Tweets sind aufgrund einer Beschränkung von Twitter derzeit nicht verfügbar."
+        android:id="@+id/textView"
+        android:layout_below="@+id/horizontalDivider"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:textSize="17sp"
+        android:layout_alignLeft="@+id/timeLabel"
+        android:layout_alignStart="@+id/timeLabel"/>
+
+</RelativeLayout>

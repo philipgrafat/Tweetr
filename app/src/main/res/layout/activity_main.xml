@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:background="@color/white"
+    android:id="@+id/relativeLayout">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipeRefreshLayout"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newTweetsLabel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/scroll_top_arrow"
+        android:drawableStart="@drawable/scroll_top_arrow"
+        android:drawablePadding="5dp"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        android:padding="10dp"
+        android:bottomRightRadius="100dp"
+        android:bottomLeftRadius="100dp"
+        android:topLeftRadius="100dp"
+        android:topRightRadius="100dp"
+        android:background="@drawable/new_tweets_button_bg"
+        android:visibility="invisible"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:text="Ergebnisse aus dem Web"
+        android:id="@+id/searchResultsFromTwitter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

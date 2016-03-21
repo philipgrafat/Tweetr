@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/listItemLayout">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/profileImageView"
+        android:src="@drawable/default_profile_6_bigger"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Aaron Paul"
+        android:id="@+id/fullNameLabel"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/profileImageView"
+        android:layout_toEndOf="@+id/profileImageView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="#292f33"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="\@aaronpaul_8"
+        android:id="@+id/screenNameLabel"
+        android:textColor="#66757f"
+        android:layout_below="@+id/fullNameLabel"
+        android:layout_alignLeft="@+id/fullNameLabel"
+        android:layout_alignStart="@+id/fullNameLabel"
+        android:fontFamily="sans-serif-light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="How a language mix-up made a young consultant earn a less than complimentary nickname #ThisIsTheNHS"
+        android:id="@+id/tweetTextLabel"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/timeLabel"
+        android:layout_toRightOf="@+id/profileImageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#292f33"
+        android:layout_alignRight="@+id/timeLabel"
+        android:layout_alignEnd="@+id/timeLabel"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="vor 8m"
+        android:id="@+id/timeLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#66757f"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-light"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tweetTextLabel"
+        android:layout_alignLeft="@+id/tweetTextLabel"
+        android:layout_alignStart="@+id/tweetTextLabel"
+        android:layout_toStartOf="@+id/timeLabel"
+        android:weightSum="3"
+        android:layout_marginTop="10dp"
+        android:id="@+id/actionsView"
+        android:layout_alignRight="@+id/timeLabel"
+        android:layout_alignEnd="@+id/timeLabel">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/replyView">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/replyButton"
+                android:src="@drawable/twitter_reply"
+                android:focusable="true"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/replyCountLabel"
+                android:layout_gravity="center_vertical"
+                android:textColor="#66757f"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:text="Reply"
+                android:fontFamily="sans-serif-light"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/retweetView">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/retweetButton"
+                android:src="@drawable/twitter_retweet"
+                android:focusable="true"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="11"
+                android:id="@+id/retweetCountLabel"
+                android:layout_gravity="center_vertical"
+                android:textColor="#66757f"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif-light"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/likeView">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/likeButton"
+                android:src="@drawable/twitter_like"
+                android:focusable="true"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="11"
+                android:id="@+id/likeCountLabel"
+                android:layout_gravity="center_vertical"
+                android:textColor="#66757f"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif-light"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:src="#FFe1e8ed"
+        android:layout_width="match_parent"
+        android:layout_height="4.5dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:layout_below="@+id/actionsView"
+        android:layout_marginTop="10dp"
+        android:id="@+id/horizontalDivider"/>
+
+</RelativeLayout>
